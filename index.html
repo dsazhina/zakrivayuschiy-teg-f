@@ -450,10 +450,11 @@
           <button class="button floppy_button" type="button"
             onclick="window['dialog_save'].showModal()"
             aria-controls="dialog_save">
-          <svg class="floppy_icon" width="21" height="21" viewBox="0 0 21 21" fill="currentColor" >
-            <use href="./svg/floppy.svg#floppy"/>
-          </svg>
-          <span class="button__text">Сохранить на память</span>
+            <svg class="floppy_icon" width="21" height="21" viewBox="0 0 21 21" fill="currentColor" >
+              <use href="./svg/floppy.svg#floppy"/>
+            </svg>
+            <span class="button__text">Сохранить на память</span>
+          </button>
         </div>
         <dialog class="dialog_save" id="dialog_save">
           <div class="dialog_save_popap">
@@ -463,8 +464,9 @@
            <p class="dialog_description">Вставьте дискету, чтобы продолжить</p>
           </div>
           <button class="button dialog_save_button_popap" type="button" 
-          onclick="window['dialog_save'].close()">
-          <span class="button_dialog_text">ok</span>
+            onclick="window['dialog_save'].close()">
+            <span class="button_dialog_text">ok</span>
+          </button>
         </dialog>
       </div>
     </main>
