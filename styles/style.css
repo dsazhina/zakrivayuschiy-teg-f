@@ -9,18 +9,17 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   font-family: var(--font-family), sans-serif;
-  inline-size: clamp(375px, 260.5634px + 30.5164vw, 700px);
   background-image: 
   repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
   repeating-linear-gradient(180deg,  #d3d3d3 0 2px, transparent 2px 4px),
   linear-gradient(180deg,  #d3d3d3 0, #e7e7e7 0.01%, #1a1a1a 100%);
   background-size: cover;
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  inline-size: clamp(375px, 260.5634px + 30.5164vw, 700px);
   font-variation-settings: "wght" 400;
 }
 .header {
@@ -43,58 +42,60 @@
   color: var(--color-text, #000);
   font-family: var(--second-family, fantasy);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
   text-transform: uppercase;
 }
 .description_element {
-font-family: var(--second-family, fantasy);
-text-transform: uppercase;
 color: var(--color-text, #000);
+font-family: var(--second-family, fantasy);
 font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+text-transform: uppercase;
 }
 .content {
-display: grid;
-gap: 50px;
+  display: grid;
+  gap: 50px;
+  padding-block-end: 103px;
 }
 .card_content {
- display: grid;
- background: var(--bg-color, #fff);
- border: 2px solid var(--color-border, #000);
+  display: grid;
+  border: 2px solid var(--color-border, #000);
+  background: var(--bg-color, #fff);
 }
 .title {
-padding-block: 1px;
-padding-inline: 10px;
-font-size: 18px;
-color: var(--color-text, #000);
-font-weight: 700;
-line-height: 1.6;
-font-variation-settings: "wght" 700;
+  padding-inline: 10px;
+  padding-block: 1px;
+  color: var(--color-text, #000);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  font-variation-settings: "wght" 700;
 }
 .card_image {
-position: relative;
-margin: 0;
-border-top: 2px solid var(--color-border, #000);
-border-bottom: 2px solid var(--color-border, #000);
+  position: relative;
+  margin: 0;
+  border-top: 2px solid var(--color-border, #000);
+  border-bottom: 2px solid var(--color-border, #000);
 }
 .card_image_picture {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .watermark {
-position: absolute;
-top: 25px;
-right: 25px;
-font-family: var(--second-family, fantasy);
-font-size: 14px;
-text-transform: uppercase;
-color: var(--color-text, #000);
-text-shadow: 1px 1px var(--color-watermark, #fff);
-mix-blend-mode: hard-light;
-opacity: 0.5;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  color: var(--color-text, #000);
+  font-family: var(--second-family, fantasy);
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px var(--color-watermark, #fff);
+  mix-blend-mode: hard-light;
 }
-@supports (-webkit-text-stroke: 2px var(--color-watermark, #fff)) {
+@supports (-webkit-text-stroke: 2px var(--color-watermark, #fff)) or (text-stroke: 1px var(--color-watermark, #fff)) {
   .watermark {
     text-shadow: none;
     text-stroke: 2px var(--color-watermark, #fff);
@@ -108,9 +109,9 @@ opacity: 0.5;
   padding: 25px;
 }
 .description {
+  color: var(--color-text, #000);
   font-size: 18px;
   line-height: 118%;
-  color: var(--color-text, #000);
 }
 .card_buttons {
   display: flex;
@@ -133,11 +134,9 @@ opacity: 0.5;
   block-size: 38px;
 }
 .card__like-button {
-  border: 2px solid var(--color-border, #000);
-  text-align: center;
   justify-content: center;
+  text-align: center;
   background-color: transparent;
-  cursor: pointer;
   inline-size: 130px;
   block-size: 38px;
 }
@@ -178,26 +177,25 @@ opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--color-border, #000);
   background-color: var(--bg-color, #fff);
 }
 .button {
   position: relative;
+  border: 2px solid var(--color-border, #000);
   overflow: hidden;
+  background-color: transparent;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 .button:focus {
   outline: none;
 }
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--color-shadow, #000);
+  box-shadow: 3px 3px 0 var(--color-shadow, #000);
 }
 .floppy_button {
-  border: transparent;
-  background-color: transparent;
-  cursor: pointer;
   inline-size: 335px;
-  block-size: 50px;
+  block-size: 53px;
 }
 .floppy_icon {
   color: var(--color-floppy-icon, #fff);
@@ -228,8 +226,7 @@ opacity: 0.5;
   inline-size: 234px;
 }
 .dialog_save_button_popap {
-  background-color: transparent;
-  cursor: pointer;
+  width: 100%;
   block-size: 38px;
 }
 .button_dialog_text {
@@ -339,4 +336,18 @@ dialog::backdrop {
     top: 20px;
     right: 10px;
   }
+  .content {
+    padding-block-end: 100px;
+  }
+  .dialog_save {
+  padding-inline: 41px;
+  inline-size: 341px;
+}
+.dialog_save_popap {
+  inline-size: 257px;
+}
+.dialog_floppy {
+  block-size: 45px;
+  inline-size: 45px;
+}
 }

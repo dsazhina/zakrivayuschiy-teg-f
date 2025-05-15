@@ -17,8 +17,8 @@
   <body class="page">
     <header class="header">
       <div class="header_element"> 
-        <h1 class="title_element">&lt;/HTML&gt;</h1>
-        <p class="description_element">закрывающий тег</p>
+        <a class="title_element" href="#">&lt;/html&gt;</a>
+        <h1 class="description_element">закрывающий тег</h1>
       </div>
     </header>
     <main class="content">
@@ -458,15 +458,16 @@
         </div>
         <dialog class="dialog_save" id="dialog_save">
           <div class="dialog_save_popap">
-            <svg width="39" height="39" viewBox="0 0 21 21" fill="currentColor">
+            <svg class="dialog_floppy" width="39" height="39" viewBox="0 0 21 21" fill="currentColor">
               <use href="./svg/floppy.svg#floppy"/>
            </svg>
            <p class="dialog_description">Вставьте дискету, чтобы продолжить</p>
           </div>
-          <button class="button dialog_save_button_popap" type="button" 
-            onclick="window['dialog_save'].close()">
-            <span class="button_dialog_text">ok</span>
-          </button>
+          <form method="dialog" >
+            <button class="button dialog_save_button_popap" type="submit">
+              <span class="button_dialog_text">ok</span>
+            </button>
+          </form>
         </dialog>
       </div>
     </main>
