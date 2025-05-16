@@ -341,13 +341,10 @@ dialog::backdrop {
   }
   .dialog_save {
   padding-inline: 41px;
-  inline-size: 341px;
-}
-.dialog_save_popap {
-  inline-size: 257px;
+  inline-size: 342px;
 }
 .dialog_floppy {
-  block-size: 45px;
-  inline-size: 45px;
+  block-size: 46px;
+  inline-size: 46px;
 }
 }
